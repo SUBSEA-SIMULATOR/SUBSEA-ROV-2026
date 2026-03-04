@@ -19,8 +19,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>/home/yahya/uissubsea_ws/install/rov_description/share/rov_description/models/uissubsea_rov/meshes/rov.stl</uri>
-            <scale>0.1 0.1 0.1</scale>
+            <uri>meshes/rov.stl</uri>
           </mesh>
         </geometry>
         <material>
