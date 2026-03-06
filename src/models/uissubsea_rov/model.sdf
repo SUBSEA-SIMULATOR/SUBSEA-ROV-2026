@@ -20,6 +20,7 @@
         <geometry>
           <mesh>
             <uri>meshes/rov.stl</uri>
+            <scale>0.01 0.01 0.01</scale>
           </mesh>
         </geometry>
         <material>
