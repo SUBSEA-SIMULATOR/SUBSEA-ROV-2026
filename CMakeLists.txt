@@ -24,8 +24,9 @@ if(BUILD_TESTING)
 endif()
 
 # Install model files
-install(DIRECTORY src/models/
+install(
+  DIRECTORY src/models/
   DESTINATION share/${PROJECT_NAME}/models
-  FILES_MATCHING PATTERN "*")
+)
 
 ament_package()
