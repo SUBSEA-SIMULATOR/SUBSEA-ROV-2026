@@ -21,7 +21,7 @@
     </inertial>
 
   <visual name="rov_visual">
-  <pose>-4.315 -1.793 -3.2 0 0 0</pose>
+  <pose>0 0 0 0 0 0</pose>
     <geometry>
       <mesh>
         
@@ -40,10 +40,11 @@
 
   <!-- COLLISION -->
   <collision name="rov_collision">
-  <pose>-4.315 -1.793 -3.2 0 0 0</pose>
+  <!-- center box on mesh: STL center=(431.5,179.3,320)mm * 0.001 -->
+  <pose>0.4315 0.1793 0.32 0 0 0</pose>
     <geometry>
       <box>
-        <size>0.6 0.4 0.3</size>
+        <size>0.61 0.38 0.64</size>
       </box>
     </geometry>
   </collision>
@@ -72,21 +73,84 @@
   </joint>
 
   <!-- ================= THRUSTERS ================= -->
-
+  
+  <!-- Thruster positions = absolute STL coords (mm) * 0.001 -->
+  <!--front left bottom -->
   <link name="thruster_fl">
-    <pose relative_to="base_link"> 2.5 1 2.3 0 0 0</pose>
+    <pose relative_to="base_link">5.6641 1.72599 5.84761 0 0 0</pose>
+    <!-- TEMP MARKER: remove before release -->
+    <visual name="marker_fl">
+      <geometry><sphere><radius>0.5</radius></sphere></geometry>
+      <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
+    </visual>
   </link>
 
+  <!--front right bottom -->
   <link name="thruster_fr">
-    <pose relative_to="base_link">-2.5 1 2.3 0 0 0</pose>
+    <pose relative_to="base_link">2.96659 1.72599 5.84761 0 0 0</pose>
+    <!-- TEMP MARKER: remove before release -->
+    <visual name="marker_fr">
+      <geometry><sphere><radius>0.5</radius></sphere></geometry>
+      <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material>
+    </visual>
   </link>
-
+  <!--rear right bottom -->
   <link name="thruster_bl">
-    <pose relative_to="base_link"> 2.5 1 -2.3 0 0 0</pose>
+    <pose relative_to="base_link">2.96659 1.72599 0.55239 0 0 0</pose>
+    <!-- TEMP MARKER: remove before release -->
+    <visual name="marker_bl">
+      <geometry><sphere><radius>0.5</radius></sphere></geometry>
+      <material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material>
+    </visual>
+  </link>
+  <!--rear left bottom -->
+  <link name="thruster_br">
+    <pose relative_to="base_link">5.6641 1.72599 0.55239 0 0 0</pose>
+    <!-- TEMP MARKER: remove before release -->
+    <visual name="marker_br">
+      <geometry><sphere><radius>0.5</radius></sphere></geometry>
+      <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+    </visual>
   </link>
 
-  <link name="thruster_br">
-    <pose relative_to="base_link"> -2.5 1 -2.3 0 0 0</pose>
+    <!--front left top -->
+  <link name="thruster_br_top">
+    <pose relative_to="base_link">6.76535 2.493 5.55 0 0 0</pose>
+    <!-- TEMP MARKER: remove before release -->
+    <visual name="marker_br">
+      <geometry><sphere><radius>0.5</radius></sphere></geometry>
+      <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+    </visual>
+  </link>
+
+    <!--front right top -->
+  <link name="thruster_br_bottom">
+    <pose relative_to="base_link">1.86535 2.493 5.55 0 0 0</pose>
+    <!-- TEMP MARKER: remove before release -->
+    <visual name="marker_br">
+      <geometry><sphere><radius>0.5</radius></sphere></geometry>
+      <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+    </visual>
+  </link>
+
+    <!--rear right top -->
+  <link name="thruster_br bottom2">
+    <pose relative_to="base_link">1.86535 2.493 0.85 0 0 0</pose>
+    <!-- TEMP MARKER: remove before release -->
+    <visual name="marker_br">
+      <geometry><sphere><radius>0.5</radius></sphere></geometry>
+      <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+    </visual>
+  </link>
+
+    <!--rear left top -->
+  <link name="thruster_br bottom3">
+    <pose relative_to="base_link">6.76535 2.493 0.85 0 0 0</pose>
+    <!-- TEMP MARKER: remove before release -->
+    <visual name="marker_br">
+      <geometry><sphere><radius>0.5</radius></sphere></geometry>
+      <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+    </visual>
   </link>
 
   <!-- ================= JOINTS ================= -->
