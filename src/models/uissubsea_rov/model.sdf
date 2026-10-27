@@ -9,11 +9,14 @@
   <link name="base_link">
 
     <inertial>
-      <mass>60.0</mass>
+      <!-- base_link is at mesh origin, so place COM at the hull center relative to base_link -->
+      <pose>0.4315 0.1793 0.32 0 0 0</pose>
+      <!-- Tuned near neutral buoyancy for the current 0.61x0.38x0.64 m collision volume -->
+      <mass>148.0</mass>
       <inertia>
-        <ixx>0.6</ixx>
-        <iyy>0.6</iyy>
-        <izz>0.8</izz>
+        <ixx>1.48</ixx>
+        <iyy>1.48</iyy>
+        <izz>1.97</izz>
         <ixy>0</ixy>
         <ixz>0</ixz>
         <iyz>0</iyz>
